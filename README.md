@@ -10,7 +10,7 @@ Create online store withe following requirements:
     - At least 3 font sizes (to help differentiate sections). ✅
     - At least 2 external links (maybe to a shipping company, or an email address).
     - At least 1 table. ✅
-    - At least 1 list (ordered or unordered, you can choose).
+    - At least 1 list (ordered or unordered, you can choose). ✅
     - At least one submit button form (possibly to simulate a login - don’t worry about the functionality of this yet).
     - At least one radio button form (you could select different kinds of shipping methods to your location). ✅
     - At least one quote/testimonial (this could be from a previous customer or a review).

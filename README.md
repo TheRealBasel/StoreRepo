@@ -1,5 +1,7 @@
 # Online Store
 
+Live on : https://TheRealBasel.github.io/StoreRepo/
+
 Create online store withe following requirements:
 ## HTML
 - Create a homepage for your store. ✅

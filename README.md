@@ -44,11 +44,11 @@ you created Online store with HTML and CSS now you will complete your work by ad
 
 Your online store is required to implement the following:
 * Within the entirety of your site, you should have the following JavaScript functionality:
-    * Create a functional shopping cart for your online store.
-    * Allow a “quick add to cart” from the catalogue page.
-    * Each product’s page must also have the option to “add to cart”.
-    * When an item is added, an alert should tell the user what the current total is.
-    * Create a new html page for the cart section which allows the user to see what is in their cart, each item’s price, and the total cost (remember to add VAT!).
+    * Create a functional shopping cart for your online store.✅
+    * Allow a “quick add to cart” from the catalogue page.✅
+    * Each product’s page must also have the option to “add to cart”.✅
+    * When an item is added, an alert should tell the user what the current total is.✅
+    * Create a new html page for the cart section which allows the user to see what is in their cart, each item’s price, and the total cost (remember to add VAT!).✅
     * Create a form which allows for “discount coupons”.
     * Create forms to allow a user to select “collection” or “delivery”.
     * Create forms for different delivery options.

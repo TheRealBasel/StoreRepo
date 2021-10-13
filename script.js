@@ -86,10 +86,10 @@ function getTotalPrice (){
 var currentValue = 0;
 function handleClick(myRadio) {
     let price = getTotalPrice ();
-    document.getElementById("subtotalText").innerText = price.subtotal;
-    document.getElementById("shippinglText").innerText = price.shipping;
-    document.getElementById("discountText").innerText = price.discount;
-    document.getElementById("totalText").innerText = price.total;
+    document.getElementById("subtotalText").innerText = Math.floor(price.subtotal);
+    document.getElementById("shippinglText").innerText = Math.floor(price.shipping);
+    document.getElementById("discountText").innerText = Math.floor(price.discount);
+    document.getElementById("totalText").innerText = Math.floor(price.total);
 
     if ( price.discount > 0 ){
         document.getElementById("couponAppliedText").innerText = "You got a 40% discount.";

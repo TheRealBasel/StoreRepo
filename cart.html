@@ -192,7 +192,7 @@
                     productDiv.innerHTML = `<img src="images/${cart[i].name}.jpg" class="img-fluid rounded-start" width="150" height="150"></img>
                     <h6 class="flex-grow-1 p-2 align-self-center">${cart[i].name}</h5>
                     <div class="text-muted p-2 align-self-center">${cart[i].count}x</div>
-                    <div class="text-success p-2 align-self-center">${cart[i].price} SAR</div>`;
+                    <div class="text-success p-2 align-self-center">${Math.floor(cart[i].price)} SAR</div>`;
                     document.getElementById("productsList").appendChild(productDiv);
                 }
             }

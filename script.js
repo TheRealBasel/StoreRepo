@@ -17,16 +17,12 @@ function addToCart ( product ){
         if (cart[i] && cart[i].name === selectedProduct.name) {
             cart[i].count++;
             productAlreadyFound = true;
-            console.log ( "updated" );
-
         }
     }
     if ( !productAlreadyFound ){
         cart.push ({name:selectedProduct.name, price:selectedProduct.price, count:productCount});
-        console.log ( "Pushed" );
     }
     saveCart();
-    console.log ( cart );
     let totalPrice = 0;
     for ( let i = 0; i < cart.length; i++){
         totalPrice += cart[i].price * cart[i].count;

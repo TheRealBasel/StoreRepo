@@ -227,31 +227,16 @@
 								</tbody>
 							</table>
 							<hr>
-							<h6>Choose Capacity</h6>
-							<div class="row justify-content-center">
-								<div class="form-check col-3">
-									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-									<label class="form-check-label" for="flexRadioDefault1">
-										64GB
-									</label>
-								</div>
-								<div class="form-check col-3">
-									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-									<label class="form-check-label" for="flexRadioDefault1">
-										128GB
-									</label>
-								</div>
-								<div class="form-check col-3">
-									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-									<label class="form-check-label" for="flexRadioDefault1">
-										256GB
-									</label>
-								</div>
-							</div>
+								<select class="form-select" aria-label="Default select example">
+									<option selected>Choose Capacity</option>
+									<option value="1">64GB</option>
+									<option value="2">128GB</option>
+									<option value="3">256GB</option>
+								  </select>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-							<button type="button" class="btn btn-primary" onclick="addToCart()">Add to cart</button>
+							<button type="button" class="btn btn-primary" onclick="addToCart(2)" data-bs-dismiss="modal">Add to cart</button>
 						</div>
 					</div>
 				</div>

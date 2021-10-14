@@ -1,15 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!-- Bootstrap -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
 
 		<!-- Custom css style -->
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
 
 		<title>[FS102021] Basel Alanazi</title>
 	</head>
@@ -18,11 +26,17 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
-					<h4 class="text-info">
-						My Store
-					</h4>
+					<h4 class="text-info">My Store</h4>
 				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -30,96 +44,199 @@
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">Home</a>
 						</li>
-                        <li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="cart.html">Cart</a>
+						<li class="nav-item">
+							<a
+								class="nav-link active"
+								aria-current="page"
+								href="cart.html"
+								>Cart</a
+							>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="about.html">About Us</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
+							<a class="nav-link" href="contact.html"
+								>Contact Us</a
+							>
 						</li>
 					</ul>
 				</div>
-				<button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#loginFormModal">Login</button>
+				<button
+					class="btn btn-outline-info"
+					data-bs-toggle="modal"
+					data-bs-target="#loginFormModal"
+				>
+					Login
+				</button>
 			</div>
 		</nav>
 		<!-- END HEADER SECTION -->
 		<div class="conatiner storeBackground p-5">
-            <div class="container mt-5 p-3 rounded cart p-0">
-                <div class="row no-gutters">
-                    <div class="col-md-8">
-                        <div class="product-details mr-2">
-                            <ul class="list-group list-group-flush" id="productsList"></ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 card p-0">
-                        <div class="payment-info">
-                            <div class="d-flex justify-content-between align-items-center card-header">
-                                <span>Cart details</span>
-                            </div>
-                            <div class="card-body">
-                                <span class="type d-block mt-3 mb-1">Delivery Options</span>
-                                <div class="input-group mb-3">
-                                    <label class="radio"> 
-                                        <input type="radio" name="deOptions" value="pickup" onclick="handleClick(this);" checked> 
-                                        <span>
-                                            Pickup
-                                        </span> 
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <label class="radio"> 
-                                        <input type="radio" name="deOptions" value="1day" onclick="handleClick(this);"> 
-                                        <span>
-                                            Super delivery <br><small class="text-muted">arrives in 24 hour</small>
-                                        </span> 
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <label class="radio"> 
-                                        <input type="radio" name="deOptions" value="1week" onclick="handleClick(this);"> 
-                                        <span>
-                                            Store delivery <br><small class="text-muted">arrives in 1 week</small>
-                                        </span> 
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input id="couponText" type="text" class="form-control" placeholder="Enter your coupon" aria-label="Enter your coupon" aria-describedby="basic-addon2">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="handleClick(this);">Apply</button>
-                                </div>
-                                <small id="couponAppliedText" class="text-success"></small>
-                                <hr class="line">
-                                <div class="sticky-bottom">                            
-                                    <div class="d-flex justify-content-between information">
-                                        <span>Subtotal</span>
-                                        <span id="subtotalText">0</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between information">
-                                        <span>Shipping</span>
-                                        <span id="shippinglText">0</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between information">
-                                        <span>Discount</span>
-                                        <span id="discountText">0</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between information">
-                                        <span>Total(Incl. taxes)</span>
-                                        <span id="totalText">0</span>
-                                    </div>
-                                    <button class="btn btn-primary btn-block d-flex justify-content-between mt-3" onclick="confirmOrder();"type="button" data-bs-toggle="modal" data-bs-target="#confirmModal">
-                                        <span>Checkout</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div class="container mt-5 p-3 rounded cart p-0">
+				<div class="row no-gutters">
+					<div class="col-md-8">
+						<div class="product-details mr-2">
+							<ul
+								class="list-group list-group-flush"
+								id="productsList"
+							></ul>
+						</div>
+					</div>
+					<div class="col-md-4 card p-0">
+						<div class="payment-info">
+							<div
+								class="
+									d-flex
+									justify-content-between
+									align-items-center
+									card-header
+								"
+							>
+								<span>Cart details</span>
+							</div>
+							<div class="card-body">
+								<span class="type d-block mt-3 mb-1"
+									>Delivery Options</span
+								>
+								<div class="input-group mb-3">
+									<label class="radio">
+										<input
+											type="radio"
+											name="deOptions"
+											value="pickup"
+											onclick="handleClick(this);"
+											checked
+										/>
+										<span> Pickup </span>
+									</label>
+								</div>
+								<div class="input-group mb-3">
+									<label class="radio">
+										<input
+											type="radio"
+											name="deOptions"
+											value="1day"
+											onclick="handleClick(this);"
+										/>
+										<span>
+											Super delivery <br /><small
+												class="text-muted"
+												>arrives in 24 hour</small
+											>
+										</span>
+									</label>
+								</div>
+								<div class="input-group mb-3">
+									<label class="radio">
+										<input
+											type="radio"
+											name="deOptions"
+											value="1week"
+											onclick="handleClick(this);"
+										/>
+										<span>
+											Store delivery <br /><small
+												class="text-muted"
+												>arrives in 1 week</small
+											>
+										</span>
+									</label>
+								</div>
+								<div class="input-group mb-3">
+									<input
+										id="couponText"
+										type="text"
+										class="form-control"
+										placeholder="Enter your coupon"
+										aria-label="Enter your coupon"
+										aria-describedby="basic-addon2"
+									/>
+									<button
+										class="btn btn-outline-secondary"
+										type="button"
+										id="button-addon2"
+										onclick="handleClick(this);"
+									>
+										Apply
+									</button>
+								</div>
+								<small
+									id="couponAppliedText"
+									class="text-success"
+								></small>
+								<hr class="line" />
+								<div class="sticky-bottom">
+									<div
+										class="
+											d-flex
+											justify-content-between
+											information
+										"
+									>
+										<span>Subtotal</span>
+										<span id="subtotalText">0</span>
+									</div>
+									<div
+										class="
+											d-flex
+											justify-content-between
+											information
+										"
+									>
+										<span>Shipping</span>
+										<span id="shippinglText">0</span>
+									</div>
+									<div
+										class="
+											d-flex
+											justify-content-between
+											information
+										"
+									>
+										<span>Discount</span>
+										<span id="discountText">0</span>
+									</div>
+									<div
+										class="
+											d-flex
+											justify-content-between
+											information
+										"
+									>
+										<span>Total(Incl. taxes)</span>
+										<span id="totalText">0</span>
+									</div>
+									<button
+										class="
+											btn btn-primary btn-block
+											d-flex
+											justify-content-between
+											mt-3
+										"
+										onclick="confirmOrder();"
+										type="button"
+										data-bs-toggle="modal"
+										data-bs-target="#confirmModal"
+									>
+										<span>Checkout</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Login form modal -->
-		<div class="modal fade" id="loginFormModal" tabindex="-1" aria-labelledby="loginFormModal" aria-hidden="true">
+		<div
+			class="modal fade"
+			id="loginFormModal"
+			tabindex="-1"
+			aria-labelledby="loginFormModal"
+			aria-hidden="true"
+		>
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -128,37 +245,71 @@
 					<div class="modal-body">
 						<form>
 							<div class="mb-3">
-							  	<label for="loginEmailInput" class="form-label">Email address</label>
-							  	<input type="email" class="form-control" id="loginEmailInput" aria-describedby="emailHelp">
+								<label for="loginEmailInput" class="form-label"
+									>Email address</label
+								>
+								<input
+									type="email"
+									class="form-control"
+									id="loginEmailInput"
+									aria-describedby="emailHelp"
+								/>
 							</div>
 							<div class="mb-3">
-							  	<label for="loginPasswordInput" class="form-label">Password</label>
-							  	<input type="password" class="form-control" id="loginPasswordInput">
+								<label
+									for="loginPasswordInput"
+									class="form-label"
+									>Password</label
+								>
+								<input
+									type="password"
+									class="form-control"
+									id="loginPasswordInput"
+								/>
 							</div>
-							<button type="submit" class="btn btn-primary">Login</button>
-						  </form>
+							<button type="submit" class="btn btn-primary">
+								Login
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- End login form modal -->
-        <!-- Confirm modal -->
-        <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="confirmModalLabel">Order Confirmation</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="orderTextRE">
-                  
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
+		<!-- Confirm modal -->
+		<div
+			class="modal fade"
+			id="confirmModal"
+			tabindex="-1"
+			aria-labelledby="confirmModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="confirmModalLabel">
+							Order Confirmation
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body" id="orderTextRE"></div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- FOOTER -->
 		<nav class="footer fixed-bottom navbar-light bg-info">
 			<div class="container-fluid">
@@ -166,38 +317,63 @@
 					<p class="text-dark text-center">MyStore 2021</p>
 				</div>
 			</div>
-
 		</nav>
-		
-        <script src="script.js"></script>
-        <script>
 
-            let price = getTotalPrice ();
-            document.getElementById("subtotalText").innerText = Math.floor(price.subtotal);
-            document.getElementById("shippinglText").innerText = Math.floor(price.shipping);
-            document.getElementById("discountText").innerText = Math.floor(price.discount);
-            document.getElementById("totalText").innerText = Math.floor(price.total);
-            
-            if ( price.discount > 0 ){
-                document.getElementById("couponAppliedText").innerText = "You got a 40% discount.";
-            }else{
-                document.getElementById("couponAppliedText").innerText = "";
-            }
+		<script src="script.js"></script>
+		<script>
+			let price = getTotalPrice();
+			document.getElementById("subtotalText").innerText = Math.floor(
+				price.subtotal
+			);
+			document.getElementById("shippinglText").innerText = Math.floor(
+				price.shipping
+			);
+			document.getElementById("discountText").innerText = Math.floor(
+				price.discount
+			);
+			document.getElementById("totalText").innerText = Math.floor(
+				price.total
+			);
 
+			if (price.discount > 0) {
+				document.getElementById("couponAppliedText").innerText =
+					"You got a 40% discount.";
+			} else {
+				document.getElementById("couponAppliedText").innerText = "";
+			}
 
-            for ( let i = 0; i < cart.length; i++){
-                if (cart[i]) {
-                    let productDiv = document.createElement("li");
-                    productDiv.classList = "list-group-item m-2 d-flex";
-                    productDiv.innerHTML = `<img src="images/${cart[i].name}.jpg" class="img-fluid rounded-start" width="150" height="150"></img>
-                    <h6 class="flex-grow-1 p-2 align-self-center">${cart[i].name}</h5>
-                    <div class="text-muted p-2 align-self-center">${cart[i].count}x</div>
-                    <div class="text-success p-2 align-self-center">${Math.floor(cart[i].price)} SAR</div>`;
-                    document.getElementById("productsList").appendChild(productDiv);
-                }
-            }
-        </script>
+			for (let i = 0; i < cart.length; i++) {
+				if (cart[i]) {
+					let productDiv = document.createElement("li");
+					productDiv.classList = "list-group-item m-2 d-flex";
+					productDiv.innerHTML = `<img src="${
+						cart[i].image
+					}" class="img-fluid rounded-start" width="150" height="150"></img>
+                    <div class="d-grid fw-lighter">
+                    <h6 class="flex-grow-1 p-3 pb-0 align-self-center">${
+						cart[i].name
+					}</h6>
+                    <span class="text-muted fs-6 p-3 pt-0">${
+						cart[i].description
+					}</span>
+                    </div>
+                    <div class="text-muted p-2 align-self-center">${
+						cart[i].count
+					}x</div>
+                    <div class="text-success p-2 align-self-center">${Math.floor(
+						cart[i].price
+					)} SAR</div>`;
+					document
+						.getElementById("productsList")
+						.appendChild(productDiv);
+				}
+			}
+		</script>
 		<!-- Bootstrap JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
-  	</body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

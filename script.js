@@ -111,8 +111,7 @@ function handleClick(myRadio) {
 	document.getElementById("totalText").innerText = Math.floor(price.total);
 
 	if (price.discount > 0) {
-		document.getElementById("couponAppliedText").innerText =
-			"You got a 40% discount.";
+		document.getElementById("couponAppliedText").innerText = "You got a 40% discount.";
 	} else {
 		document.getElementById("couponAppliedText").innerText = "";
 	}
@@ -136,7 +135,7 @@ function addProductsToIndex(jsonArray) {
         style="cursor: pointer"
         >
         <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex align-items-center">
                 <img
                     src="${jsonArray[i].image}"
                     class="img-fluid rounded-start zoom-hover"
